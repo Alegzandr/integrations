@@ -45,12 +45,8 @@ const Home: NextPage = () => {
                 <Link href="/agents">Valorant Agents</Link>
               </li>
               <li>
-                <i className="fa-solid fa-address-card"></i>
-                <Link href="/contacts">Contact Management</Link>
-              </li>
-              <li>
                 <i className="fas fa-shoe-prints"></i>
-                <Link href="/shoe">Shoe Product</Link>
+                <Link href="/shoes">Shoes</Link>
               </li>
             </ul>
           </nav>
