@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 import shoesStyles from '../../styles/Shoes.module.css'
 import searchImage from '../../public/assets/shoes/search.png'
 import cartImage from '../../public/assets/shoes/cart.png'
@@ -106,22 +107,40 @@ const Shoes: NextPage = () => {
             move, laces that you’ll never need to tie again, and an<br />
             odor-fighting copper thread lining.<br />
 
-            <button className={`${shoesStyles.btn} ${shoesStyles['btn-c2a']}`}>
+            <motion.button
+              className={`${shoesStyles.btn} ${shoesStyles['btn-c2a']}`}
+              whileHover={{ scale: 1.1 }}
+            >
               <Image src={bagImage} alt="Shopping bag icon" />
               &nbsp;&nbsp;
               <span>Add To Cart</span>
-            </button>
-            <button className={shoesStyles.btn}>
+            </motion.button>
+            <motion.button
+              className={shoesStyles.btn}
+              whileHover={{ scale: 1.1 }}
+            >
               <Image src={playImage} alt="Play icon" />
               &nbsp;&nbsp;
               <span>Watch Intro</span>
-            </button>
+            </motion.button>
           </div>
 
-          <span className={shoesStyles.number}>94</span>
-          <div className={shoesStyles.shoe}>
-            <Image src={shoesImage} alt="Nike shoe" />
-          </div>
+          <motion.span 
+            className={shoesStyles.number}
+            initial={{ scale: 1.3, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ ease: 'easeOut', duration: 1.5 }}
+          >
+            94
+          </motion.span>
+          <motion.div 
+            className={shoesStyles.shoe}
+            initial={{ scale: 1.4, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ ease: 'easeOut', duration: 1 }}
+          >
+            <Image src={shoesImage} alt="Nike shoe" layout="responsive" />
+          </motion.div>
 
           <div className={shoesStyles.count}>
             01 / 

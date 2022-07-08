@@ -47,9 +47,34 @@
   font-family: "Sofia Pro Extra Light", sans-serif;
 }
 
-.container  a {
+.container a {
+  /* Fonts */
   color: #000;
   text-decoration: none;
+}
+
+/* Hover effect */
+.container nav a, .footer ul a {
+  display: inline-block;
+  position: relative;
+}
+
+.container nav a::after, .footer ul a::after {
+  content: '';
+  position: absolute;
+  width: 70%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: -5px;
+  left: 0;
+  background-color: rgb(128, 128, 128);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.container nav a:hover::after, .footer ul a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 .header {
@@ -57,7 +82,7 @@
 }
 
 .header > div {
-  padding: 50px;
+  padding: 25px 50px 0 50px;
 }
 
 .header > div > a, .header ul > li {
@@ -69,12 +94,14 @@
 }
 
 .header h2 {
+  /* Fonts */
   font-family: "Circular Std Bold", sans-serif;
   text-transform: lowercase;
   font-size: 1.8em;
 }
 
 .header h2 > span {
+  /* Fonts */
   font-family: "Circular Std Medium", sans-serif;
   font-weight: 100;
   font-size: .9em;
@@ -130,14 +157,20 @@
 }
 
 .main > div {
-  line-height: 1.5;
-  padding: 20px;
+  /* Positionning */
   margin-top: 40px;
   margin-left: 25px;
+
+  /* Sizing */
+  padding: 20px;
+
+  /* Fonts */
   font-size: 1.25em;
+  line-height: 1.5;
 }
 
 .main > div > h1 {
+  /* Fonts */
   font-family: "Sofia Pro Ultra Light", sans-serif;
   color: #000;
   font-weight: 100;
@@ -146,6 +179,7 @@
 }
 
 .main > div > h1 > span {
+  /* Fonts */
   font-size: .5em;
   vertical-align: top;
 }
@@ -155,11 +189,19 @@
 }
 
 .btn {
-  padding: 25px 30px;
   border-radius: 8px;
   border: 1px solid #000;
   background: #fff;
+
+  /* Sizing */
+  padding: 25px 30px;
+
+  /* Positionning */
   margin-top: 40px;
+  position: relative;
+  z-index: 1000;
+
+  /* Fonts */
   font-size: .8em;
 }
 
@@ -179,7 +221,7 @@
 .number {
   /* Fonts */
   font-family: "Avenir Heavy", sans-serif;
-  font-size: 24em;
+  font-size: 30vw;
   color: rgba(236, 202, 123, .2);
 
   /* Positionning */
@@ -189,22 +231,31 @@
 }
 
 .shoe {
+  /* Positionning */
   position: absolute;
   bottom: 100px;
   right: 120px;
+
+  /* Sizing */
+  width: 60vw;
 }
 
 .count {
+  /* Sizing */
   padding: 0;
   width: 68px;
-  text-align: center;
+
+  /* Positionning */
   position: absolute;
-  bottom: 50px;
   left: calc(50vw - 34px);
-  color: #000;
-  font-family: sans-serif;
-  letter-spacing: -1px;
+  bottom: 50px;
+
+  /* Fonts */
   font-size: .8em !important;
+  font-family: sans-serif;
+  color: #000;
+  text-align: center;
+  letter-spacing: -1px;
 }
 
 .aside, .footer {
@@ -223,8 +274,11 @@
 
   .header > div > nav {
     display: inline-block;
+
+    /* Positionning */
     position: absolute;
     right: 25px;
+    z-index: 1000;
   }
 
   .header ul > li {
@@ -239,23 +293,32 @@
   .aside ul {
     list-style-type: none;
     padding: 0;
+
+    /* Positionning */
     margin-left: 50px;
     margin-top: 50px;
   }
 
   .aside ul > li > a {
+    /* Fonts */
     font-size: 1.3em;
     font-family: "Sofia Pro Ultra Light", sans-serif;
   }
 
   .aside ul > li > a > span {
-    color: #fff;
     background: rgba(0, 0, 0, .2);
     border-radius: 40px;
-    font-size: .6em;
+
+    /* Sizing */
     padding: 6px 8px;
-    vertical-align: middle;
+
+    /* Positionning */
     margin-left: 10px;
+
+    /* Fonts */
+    color: #fff;
+    font-size: .6em;
+    vertical-align: middle;
   }
 
   .aside ul > li:not(:first-of-type) {
@@ -263,15 +326,20 @@
   }
 
   .extra {
-    font-size: 2.4em;
+    /* Positionning */
     margin-left: 50px;
     position: absolute;
-    bottom: 270px;
+    bottom: 227px;
+
+    /* Fonts */
     font-family: "Sofia Pro Ultra Light", sans-serif;
+    font-size: 2.4em;
   }
 
   .extra > span {
     background: #000;
+
+    /* Fonts */
     color: #fff;
     font-family: "Sofia Pro Light", sans-serif;
   }
@@ -285,12 +353,14 @@
   }
 
   .more {
+    /* Positionning */
     margin-left: 50px;
     position: absolute;
-    bottom: 215px;
+    bottom: 172px;
   }
 
   .more a {
+    /* Fonts */
     text-transform: lowercase;
     font-family: "Sofia Pro Light", sans-serif;
     font-weight: 600;
@@ -299,16 +369,23 @@
   .more a::before {
     content: "";
     display: inline-block;
+    border-bottom: 1px solid #000;
+
+    /* Sizing */
     width: 48px;
     height: 1em;
-    border-bottom: 1px solid #000;
+    
+    /* Positionning */
     margin-right: 69px;
   }
 
   .scroll {
+    /* Positionning */
     margin-left: 50px;
     position: absolute;
     bottom: 50px;
+
+    /* Fonts */
     font-family: "Sofia Pro Light", sans-serif;
     font-weight: 600;
   }
@@ -330,6 +407,7 @@
     /* Flex */
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     /* Sizing */
     height: 94px;
