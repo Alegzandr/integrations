@@ -108,7 +108,7 @@
 }
 
 .main {
-   /* Positionning */
+  /* Positionning */
   grid-area: 2 / 1 / 3 / 2;
 
   /* Fonts */
@@ -158,14 +158,14 @@
 
 .main > div {
   /* Positionning */
-  margin-top: 40px;
+  margin-top: -45px;
   margin-left: 25px;
 
   /* Sizing */
   padding: 20px;
 
   /* Fonts */
-  font-size: 1.25em;
+  font-size: 1em;
   line-height: 1.5;
 }
 
@@ -174,7 +174,7 @@
   font-family: "Sofia Pro Ultra Light", sans-serif;
   color: #000;
   font-weight: 100;
-  font-size: 3em;
+  font-size: 2.2em;
   margin: -10px 0 0 0;
 }
 
@@ -194,7 +194,7 @@
   background: #fff;
 
   /* Sizing */
-  padding: 25px 30px;
+  padding: 10px;
 
   /* Positionning */
   margin-top: 40px;
@@ -203,6 +203,7 @@
 
   /* Fonts */
   font-size: .8em;
+  color: #000;
 }
 
 .btn > * {
@@ -234,7 +235,7 @@
   /* Positionning */
   position: absolute;
   bottom: 100px;
-  right: 120px;
+  right: 20px;
 
   /* Sizing */
   width: 60vw;
@@ -242,12 +243,13 @@
 
 .count {
   /* Sizing */
-  padding: 0;
+  padding: 0 !important;
   width: 68px;
 
   /* Positionning */
+  margin: 0 !important;
   position: absolute;
-  left: calc(50vw - 34px);
+  left: calc(50vw - 68px / 2);
   bottom: 50px;
 
   /* Fonts */
@@ -379,6 +381,12 @@
     margin-right: 69px;
   }
 
+  .more a:hover::before {
+    width: 98px;
+    margin-right: 19px;
+    transition: width 0.25s ease-out, margin-right 0.25s ease-out;
+  }
+
   .scroll {
     /* Positionning */
     margin-left: 50px;
@@ -401,6 +409,23 @@
 
   .borders li:first-of-type {
     border-left: 1px solid #e9e9e9;
+  }
+
+  .main > div {
+    margin-top: 40px;
+    font-size: 1.25em;
+  }
+
+  .main > div > h1 {
+    font-size: 3em;
+  }
+
+  .btn {
+    padding: 25px 30px;
+  }
+
+  .shoe {
+    right: 120px;
   }
 
   .footer {

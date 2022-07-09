@@ -86,7 +86,13 @@ const Shoes: NextPage = () => {
             <a href="#">Learn more</a>
           </div>
 
-          <a href="#" className={shoesStyles.scroll}>Scroll down</a>
+          <motion.a 
+            href="#"
+            className={shoesStyles.scroll}
+            whileHover={{ scale: 1.1 }}
+          >
+            Scroll down
+          </motion.a>
         </aside>
 
         <main className={shoesStyles.main}>
